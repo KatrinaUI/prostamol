@@ -1,0 +1,3208 @@
+@font-face {
+  font-family: 'Proxima Nova Regular';
+  src: url("../fonts/Proxima Nova/ProximaNova-Regular.eot");
+  src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("../fonts/Proxima Nova/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima Nova/ProximaNova-Regular.woff") format("woff"), url("../fonts/Proxima Nova/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Semibold';
+  src: url("../fonts/Proxima Nova/ProximaNova-Semibold.eot");
+  src: local("Proxima Nova Semibold"), local("ProximaNova-Semibold"), url("../fonts/Proxima Nova/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima Nova/ProximaNova-Semibold.woff") format("woff"), url("../fonts/Proxima Nova/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url("../fonts/Proxima Nova/ProximaNova-Bold.eot");
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("../fonts/Proxima Nova/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima Nova/ProximaNova-Bold.woff") format("woff"), url("../fonts/Proxima Nova/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url("../fonts/Proxima Nova/ProximaNova-Light.eot");
+  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("../fonts/Proxima Nova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima Nova/ProximaNova-Light.woff") format("woff"), url("../fonts/Proxima Nova/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Light';
+  src: url("../fonts/Proxima Nova/ProximaNova-Light.eot");
+  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("../fonts/Proxima Nova/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Proxima Nova/ProximaNova-Light.woff") format("woff"), url("../fonts/Proxima Nova/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Jikharev;
+  src: url("../fonts/Jikharev/jikharev.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'jikharev';
+  src: url("..fonts/Jikharev/jikharev.eot");
+  src: local("jikharev-regular"), url("../fonts/Jikharev/jikharev.woff") format("woff"), url("../fonts/Jikharev/jikharev.ttf") format("truetype"), url("../fonts/Jikharev/jikharev.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: auto;
+  font-size: 3.7vh;
+}
+
+@media screen and (max-width: 1250px) {
+  body {
+    font-size: 2.9vw;
+  }
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.slide__title {
+  display: block;
+  font-size: 0.63492em;
+  font-weight: 700;
+  line-height: 126%;
+  color: #2B5392;
+}
+
+.slide__title sup {
+  font-family: "Proxima Nova Light";
+  font-weight: 300;
+  line-height: 1;
+  position: relative;
+  top: 0.1221em;
+}
+
+.slide__subtitle {
+  display: block;
+  font-size: 0.7326em;
+  font-weight: 600;
+  color: #333333;
+}
+
+.slide__subtitle sup {
+  font-size: 0.42735em;
+}
+
+.slide__buttons {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+}
+
+.slide__buttons .btn:first-child {
+  margin-right: 2.442em;
+}
+
+@media screen and (max-width: 1250px) {
+  .slide__buttons {
+    margin-top: 3.663em;
+  }
+}
+
+.site-wrapper, .presentation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.presentation {
+  position: relative;
+  background-image: url("../img/images/bg.svg");
+  background-size: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  padding: 0 0.7326em;
+}
+
+.container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  max-width: 23.24786em;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.logo {
+  position: absolute;
+  width: 3.19902em;
+  top: 1.4652rem;
+  right: 1.9536em;
+  z-index: 5;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  max-width: 23.19902em;
+  margin: 0 auto;
+  padding-top: 1.7094em;
+  z-index: 99;
+}
+
+.content {
+  width: 100%;
+  max-width: 23.19902em;
+  margin: 0 auto;
+  padding-top: 0.3663em;
+}
+
+.white-block {
+  width: 100%;
+  position: relative;
+}
+
+.white-block__inner {
+  background-color: #fff;
+  border-radius: 0.2442em;
+  padding: 0.31746em 0.7326em 0.37851em;
+  position: relative;
+  z-index: 1;
+}
+
+.white-block::before, .white-block::after {
+  content: "";
+  position: absolute;
+  background-color: #007C82;
+  border-radius: 0.2442em;
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.white-block::before {
+  width: 1.90476em;
+  height: calc(100% - 1em);
+  bottom: -0.19536em;
+  left: -0.25641em;
+  opacity: .2;
+}
+
+.white-block::after {
+  width: 100%;
+  height: 1.96581em;
+  left: 0;
+  bottom: -0.45177em;
+  opacity: .5;
+}
+
+.white-block__img {
+  width: 100%;
+}
+
+.white-block__img--title {
+  display: block;
+  font-size: 0.46398em;
+  font-weight: 700;
+  line-height: 1.18;
+  color: #333333;
+  text-align: center;
+}
+
+.white-block__img--title sup {
+  font-family: "Proxima Nova Light";
+  font-weight: 300;
+}
+
+.white-block__img--title + img {
+  margin-top: 0.2442em;
+}
+
+.white-block__text p {
+  font-size: 0.54945em;
+  line-height: 2;
+}
+
+.white-block__text p b {
+  font-weight: 600;
+}
+
+.white-block__text p sup {
+  font-family: "Proxima Nova Light";
+}
+
+.white-block__text.text-small p {
+  font-size: 0.40293em;
+  line-height: 1.51;
+  margin-top: 0.4884em;
+}
+
+.white-block__text.text-small p:first-child {
+  margin-top: 0;
+}
+
+.white-block__footer .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.white-block__footer--list .list-title {
+  display: block;
+  font-size: 0.39072em;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #333333;
+}
+
+.white-block__footer--list ul {
+  margin-top: 0.1221em;
+  list-style-type: none;
+}
+
+.white-block__footer--list ul:first-child {
+  margin-top: 0;
+}
+
+.white-block__footer--list ul li {
+  padding-left: 0;
+  margin-top: 0.1221em;
+}
+
+.white-block__footer--list ul li:first-child {
+  margin-top: 0;
+}
+
+.white-block__footer--list ul li::before {
+  display: none;
+}
+
+.white-block__footer--list ul li span {
+  display: block;
+  font-size: 0.39072em;
+  line-height: 1.4;
+}
+
+.white-block__footer--list ul li b {
+  font-weight: 700;
+  color: #FF6E00;
+}
+
+.note {
+  display: inline-block;
+  font-size: 0.3663em;
+  font-weight: 600;
+  color: #333333;
+  position: relative;
+  top: -0.91575em;
+  line-height: 1;
+}
+
+.note__description {
+  color: #333333;
+}
+
+.note__description > span,
+.note__description > a,
+.note__description--col > span,
+.note__description--col > a {
+  display: block;
+  font-size: 0.30525em;
+  color: #333333;
+}
+
+.note__description--big {
+  color: #333333;
+}
+
+.note__description--big span {
+  display: block;
+  font-size: 0.3663em;
+}
+
+.note__description--row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.instruction {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 0 0.90354em 4.884em;
+  line-height: 1.3;
+  z-index: 5;
+}
+
+.instruction a {
+  font-size: 0.2442em;
+  font-weight: 700;
+  color: #2B5392;
+  text-decoration: underline;
+}
+
+.instruction p {
+  font-size: 0.18315em;
+  color: #2B5392;
+}
+
+.address {
+  position: absolute;
+  width: 5.98291em;
+  color: #2B5392;
+  right: 1.0989em;
+  bottom: 0.90354em;
+}
+
+.address p {
+  font-size: 0.18315em;
+}
+
+.address a {
+  display: block;
+  color: #2B5392;
+}
+
+@media screen and (max-width: 1250px) {
+  .address {
+    bottom: auto;
+    top: 100%;
+    padding-top: 0.4884em;
+  }
+}
+
+.version {
+  position: absolute;
+  bottom: 1.9536em;
+  right: -2.6862rem;
+  transform: rotate(-90deg);
+  z-index: 6;
+}
+
+.version span {
+  font-size: 0.2442em;
+  color: #2B5392;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding-left: 0.6105em;
+  margin-top: 0.1221em;
+  position: relative;
+}
+
+ul li:first-child {
+  margin-top: 0;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 0.2442em;
+  left: 0;
+  width: 0.3663em;
+  height: 0.3663em;
+  border-radius: 50%;
+  border: 0.06105em solid #FF6E00;
+  box-sizing: border-box;
+}
+
+ul li > span, ul li a {
+  display: block;
+  font-size: 0.54945em;
+  line-height: 1.55;
+  color: #333333;
+}
+
+ul li > span .orange, ul li a .orange {
+  color: #FF6E00;
+  font-weight: 700;
+}
+
+ul li > span b, ul li a b {
+  font-weight: 600;
+}
+
+ul li > span sup, ul li a sup {
+  font-family: "Proxima Nova Light";
+  font-weight: 300;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.30403em;
+  height: 1.37973em;
+  background-color: #fff;
+  border-radius: 0.2442em;
+  color: #333333;
+  box-shadow: 0 0 0 0.1221em rgba(255, 255, 255, 0.5);
+  position: relative;
+  transition: all .3s;
+}
+
+.btn span {
+  font-size: 0.37851em;
+  font-weight: 700;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 0.1221em white;
+}
+
+.btn.btn--note {
+  margin: 0.42735em auto 0;
+  position: relative;
+  width: 6.86203em;
+  height: 1.30647em;
+}
+
+.attention {
+  display: flex;
+  align-items: center;
+  color: #2B5392;
+}
+
+.attention__mark {
+  width: 0.65934em;
+  margin-right: 0.4884em;
+  height: 1.31868em;
+  position: relative;
+}
+
+.attention__mark span {
+  display: block;
+  font-size: 2.1978em;
+  line-height: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.attention p {
+  font-size: 0.4884em;
+  font-weight: 700;
+}
+
+.attention p a {
+  color: #2B5392;
+}
+
+.attention p sup {
+  font-family: "Proxima Nova Light";
+  font-weight: 300;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.left-img {
+  display: flex;
+  align-items: center;
+}
+
+.left-img img {
+  width: 10.98901em;
+  margin-right: 1.8315em;
+}
+
+.left-img__text p {
+  font-size: 0.54945em;
+  color: #333333;
+}
+
+.left-img__text p a {
+  color: #333333;
+}
+
+.left-img__text p b {
+  font-weight: 600;
+}
+
+.left-img__text p sup {
+  font-family: "Proxima Nova Light";
+  font-weight: 300;
+}
+
+.menu {
+  position: absolute;
+  left: 0.8547em;
+  top: 0;
+  width: 1.9536em;
+  height: 1.07448em;
+  border-radius: 0 0 0.17094em 0.17094em;
+  box-shadow: 0 0.04884em 0.4884em rgba(60, 103, 105, 0.36);
+  z-index: 99999;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-item.home img {
+  display: block;
+  height: 0.31746em;
+  width: 0.31746em;
+}
+
+.menu-item.tools img {
+  display: block;
+  width: 0.58608em;
+  height: 0.31746em;
+}
+
+.burger {
+  width: 0.58608em;
+  height: 0.31746em;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.02442em;
+  min-height: 1px;
+  max-height: 2px;
+  background: #1B1C20;
+}
+
+.burger span:first-child {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger span:last-child {
+  bottom: 0;
+}
+
+.pagination {
+  position: fixed;
+  left: 0.8547em;
+  bottom: 0;
+  width: 3.96825em;
+  height: 1.13553em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  background: #fff;
+  border-radius: 0.17094em 0.17094em 0 0;
+  box-shadow: 0 0.04884em 0.4884em rgba(60, 103, 105, 0.36);
+  overflow: hidden;
+  z-index: 99999;
+}
+
+.pagination:before {
+  height: 0.64713em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  content: '';
+  display: block;
+  opacity: .4;
+  background-color: #000;
+  position: absolute;
+}
+
+.pagination-item {
+  width: calc(50% - .5px);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  transition: background-color .2s ease, opacity .2s ease;
+}
+
+.pagination-item.disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.pagination .arrow {
+  width: 0.17094em;
+  display: block;
+  height: 100%;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/arrow.svg");
+}
+
+.pagination .arrow-next {
+  background-image: url("../img/icons/arrow.svg");
+  transform: rotate(-180deg);
+}
+
+.navigation {
+  width: 5.43em;
+  min-width: 5.43em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  transform: translateX(5.43em);
+  background-color: #fff;
+  transition: right .3s ease;
+}
+
+.navigation-open {
+  right: 5.43em;
+  box-shadow: 0 0.0675em 0.675em rgba(60, 103, 105, 0.36);
+}
+
+.navigation-button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  left: 2px;
+  width: 0.62271em;
+  height: 3.93162em;
+  background-color: #fff;
+  background-image: url("../img/images/navigation.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 0.25641em 1.18437em;
+  border-radius: 0.17094em 0 0 0.17094em;
+}
+
+.navigation-button:after {
+  content: '';
+  border-radius: 0.21978em 0 0 0.21978em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: -1px 2px 0.2442em rgba(60, 103, 105, 0.35);
+}
+
+.navigation .navigation-scroll {
+  width: 5.43em;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.navigation .navigation-scroll-wrap {
+  position: absolute;
+  inset: 0px;
+  overflow: scroll;
+  margin-right: -17px;
+  margin-bottom: -17px;
+}
+
+.navigation .navigation-scroll .scroll-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100%;
+  padding: .4em 0;
+  position: relative;
+}
+
+.navigation-item {
+  height: 2.6862em;
+  width: 3.4188em;
+  margin: 0.14652em auto;
+  border-radius: 0.30525em;
+  line-height: 1.8315em;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  box-shadow: 0 0.06105em 0.17094em rgba(78, 93, 106, 0.36);
+  transition: background-color .3s ease;
+}
+
+.navigation-item.preview-1 .slide-img {
+  background-image: url("../img/images/preview/1.jpg");
+}
+
+.navigation-item.preview-2 .slide-img {
+  background-image: url("../img/images/preview/2.jpg");
+}
+
+.navigation-item.preview-3 .slide-img {
+  background-image: url("../img/images/preview/3.jpg");
+}
+
+.navigation-item.preview-4 .slide-img {
+  background-image: url("../img/images/preview/4.jpg");
+}
+
+.navigation-item.preview-5 .slide-img {
+  background-image: url("../img/images/preview/5.jpg");
+}
+
+.navigation-item.preview-6 .slide-img {
+  background-image: url("../img/images/preview/6.jpg");
+}
+
+.navigation-item.preview-7 .slide-img {
+  background-image: url("../img/images/preview/7.jpg");
+}
+
+.navigation-item.preview-8 .slide-img {
+  background-image: url("../img/images/preview/8.jpg");
+}
+
+.navigation-item.preview-9 .slide-img {
+  background-image: url("../img/images/preview/9.jpg");
+}
+
+.navigation-item.preview-10 .slide-img {
+  background-image: url("../img/images/preview/10.jpg");
+}
+
+.navigation-item.preview-11 .slide-img {
+  background-image: url("../img/images/preview/11.jpg");
+}
+
+.navigation-item.preview-12 .slide-img {
+  background-image: url("../img/images/preview/12.jpg");
+}
+
+.navigation-item.preview-13 .slide-img {
+  background-image: url("../img/images/preview/13.jpg");
+}
+
+.navigation-item.preview-14 .slide-img {
+  background-image: url("../img/images/preview/14.jpg");
+}
+
+.navigation-item.preview-15 .slide-img {
+  background-image: url("../img/images/preview/15.jpg");
+}
+
+.navigation-item.preview-16 .slide-img {
+  background-image: url("../img/images/preview/16.jpg");
+}
+
+.navigation-item.preview-17 .slide-img {
+  background-image: url("../img/images/preview/17.jpg");
+}
+
+.navigation-item.preview-18 .slide-img {
+  background-image: url("../img/images/preview/18.jpg");
+}
+
+.navigation-item.preview-19 .slide-img {
+  background-image: url("../img/images/preview/19.jpg");
+}
+
+.navigation-item.preview-20 .slide-img {
+  background-image: url("../img/images/preview/20.jpg");
+}
+
+.navigation-item .slide-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 94%;
+  height: 92%;
+  display: block;
+  border-radius: 0.18315em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.navigation-item .slide-img:after {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0.18315em;
+  transition: color .3s ease;
+}
+
+.navigation-item.active .slide-img:after {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.navigation-item .slide-index {
+  right: 0;
+  top: -0.14652em;
+  font-size: 0.46398em;
+  line-height: 0.74481em;
+  width: 2.05128em;
+  height: 1.06227em;
+  border-radius: 0.14652em;
+  position: absolute;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align: center;
+  background: #FFFFFF;
+  color: #3F444B !important;
+  box-shadow: 0 2px 0.1221em rgba(78, 93, 106, 0.36);
+}
+
+.navigation-item .slide-index span {
+  margin: 0 auto;
+}
+
+.popups {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(0.15em);
+  transition: all .3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popups.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0.18315em 0.18315em 0.30525em rgba(0, 0, 0, 0.15);
+  border-radius: 0.18315em;
+  padding: 1.221em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #444444;
+  opacity: 0;
+  transition: all .5s;
+  z-index: 1;
+}
+
+.popup.open {
+  top: 50%;
+  opacity: 1;
+  transition-delay: .2s;
+  z-index: 2;
+}
+
+.popup.popup--930 {
+  max-width: 11.35531em;
+}
+
+.popup.popup--1050 {
+  max-width: 12.82051em;
+}
+
+.popup.popup--1115 {
+  max-width: 13.61416em;
+}
+
+.popup.popup--1200 {
+  max-width: 14.65201em;
+}
+
+.popup.popup--1300 {
+  max-width: 15.87302em;
+}
+
+.popup.popup--1400 {
+  max-width: 17.09402em;
+}
+
+.popup.popup--1500 {
+  max-width: 18.31502em;
+}
+
+.popup.popup--1600 {
+  max-width: 19.53602em;
+}
+
+.popup.popup--1800 {
+  max-width: 21.97802em;
+}
+
+.popup-close {
+  cursor: pointer;
+  position: absolute;
+  right: 0.3663em;
+  top: 0.3663em;
+  width: 0.3663em;
+  height: 0.3663em;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../img/icons/close.svg");
+}
+
+.popup__title {
+  display: block;
+  font-size: 0.68376em;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.7326em;
+}
+
+.popup-content p {
+  font-weight: 400;
+  font-size: 0.3663em;
+  line-height: 1.67;
+}
+
+.popup-content p:not(:first-child) {
+  margin-top: 0.3663em;
+}
+
+.popup-content p sup {
+  font-family: "Proxima Nova Light";
+  font-weight: 300;
+}
+
+.popup-content p a {
+  color: #333333;
+}
+
+.prostamol {
+  background-color: #2498CA;
+}
+
+.prostamol .navigation-item.preview-1 .slide-img {
+  background-image: url("../img/postamol/preview/1.jpg");
+}
+
+.prostamol .navigation-item.preview-2 .slide-img {
+  background-image: url("../img/postamol/preview/2.jpg");
+}
+
+.prostamol .navigation-item.preview-3 .slide-img {
+  background-image: url("../img/postamol/preview/3.jpg");
+}
+
+.prostamol .navigation-item.preview-4 .slide-img {
+  background-image: url("../img/postamol/preview/4.jpg");
+}
+
+.prostamol .navigation-item.preview-5 .slide-img {
+  background-image: url("../img/postamol/preview/5.jpg");
+}
+
+.prostamol .navigation-item.preview-6 .slide-img {
+  background-image: url("../img/postamol/preview/6.jpg");
+}
+
+.prostamol .navigation-item.preview-7 .slide-img {
+  background-image: url("../img/postamol/preview/7.jpg");
+}
+
+.prostamol .navigation-item.preview-8 .slide-img {
+  background-image: url("../img/postamol/preview/8.jpg");
+}
+
+.prostamol .navigation-item.preview-9 .slide-img {
+  background-image: url("../img/postamol/preview/9.jpg");
+}
+
+.prostamol .navigation-item.preview-10 .slide-img {
+  background-image: url("../img/postamol/preview/10.jpg");
+}
+
+.prostamol .navigation-item.preview-11 .slide-img {
+  background-image: url("../img/postamol/preview/11.jpg");
+}
+
+.prostamol .navigation-item.preview-12 .slide-img {
+  background-image: url("../img/postamol/preview/12.jpg");
+}
+
+.prostamol .navigation-item.preview-13 .slide-img {
+  background-image: url("../img/postamol/preview/13.jpg");
+}
+
+.prostamol .navigation-item.preview-14 .slide-img {
+  background-image: url("../img/postamol/preview/14.jpg");
+}
+
+.prostamol .navigation-item.preview-15 .slide-img {
+  background-image: url("../img/postamol/preview/15.jpg");
+}
+
+.prostamol .navigation-item.preview-16 .slide-img {
+  background-image: url("../img/postamol/preview/16.jpg");
+}
+
+.prostamol .navigation-item.preview-17 .slide-img {
+  background-image: url("../img/postamol/preview/17.jpg");
+}
+
+.prostamol .navigation-item.preview-18 .slide-img {
+  background-image: url("../img/postamol/preview/18.jpg");
+}
+
+.prostamol .navigation-item.preview-19 .slide-img {
+  background-image: url("../img/postamol/preview/19.jpg");
+}
+
+.prostamol .navigation-item.preview-20 .slide-img {
+  background-image: url("../img/postamol/preview/20.jpg");
+}
+
+.prostamol .navigation-item.preview-21 .slide-img {
+  background-image: url("../img/postamol/preview/21.jpg");
+}
+
+.prostamol .navigation-item.preview-22 .slide-img {
+  background-image: url("../img/postamol/preview/22.jpg");
+}
+
+.prostamol .navigation-item.preview-23 .slide-img {
+  background-image: url("../img/postamol/preview/23.jpg");
+}
+
+.prostamol .navigation-item.preview-24 .slide-img {
+  background-image: url("../img/postamol/preview/24.jpg");
+}
+
+.prostamol .navigation-item.preview-25 .slide-img {
+  background-image: url("../img/postamol/preview/25.jpg");
+}
+
+.prostamol .navigation-item.preview-26 .slide-img {
+  background-image: url("../img/postamol/preview/26.jpg");
+}
+
+.prostamol .navigation-item.preview-27 .slide-img {
+  background-image: url("../img/postamol/preview/27.jpg");
+}
+
+.prostamol .navigation-item.preview-28 .slide-img {
+  background-image: url("../img/postamol/preview/28.jpg");
+}
+
+.prostamol .navigation-item.preview-29 .slide-img {
+  background-image: url("../img/postamol/preview/29.jpg");
+}
+
+.prostamol .navigation-item.preview-30 .slide-img {
+  background-image: url("../img/postamol/preview/30.jpg");
+}
+
+.prostamol .navigation-item.preview-31 .slide-img {
+  background-image: url("../img/postamol/preview/31.jpg");
+}
+
+.prostamol .navigation-item.preview-32 .slide-img {
+  background-image: url("../img/postamol/preview/32.jpg");
+}
+
+.prostamol .navigation-item.preview-33 .slide-img {
+  background-image: url("../img/postamol/preview/33.jpg");
+}
+
+.prostamol .navigation-item.preview-34 .slide-img {
+  background-image: url("../img/postamol/preview/34.jpg");
+}
+
+.prostamol .navigation-item.preview-35 .slide-img {
+  background-image: url("../img/postamol/preview/35.jpg");
+}
+
+.prostamol .navigation-item.preview-36 .slide-img {
+  background-image: url("../img/postamol/preview/36.jpg");
+}
+
+.prostamol .navigation-item.preview-37 .slide-img {
+  background-image: url("../img/postamol/preview/37.jpg");
+}
+
+.prostamol .navigation-item.preview-38 .slide-img {
+  background-image: url("../img/postamol/preview/38.jpg");
+}
+
+.prostamol .navigation-item.preview-39 .slide-img {
+  background-image: url("../img/postamol/preview/39.jpg");
+}
+
+.prostamol .navigation-item.preview-40 .slide-img {
+  background-image: url("../img/postamol/preview/40.jpg");
+}
+
+.prostamol .navigation-item.preview-41 .slide-img {
+  background-image: url("../img/postamol/preview/41.jpg");
+}
+
+.prostamol .navigation-item.preview-42 .slide-img {
+  background-image: url("../img/postamol/preview/42.jpg");
+}
+
+.prostamol .navigation-item.preview-43 .slide-img {
+  background-image: url("../img/postamol/preview/43.jpg");
+}
+
+.prostamol.no-bg {
+  background-color: transparent;
+}
+
+.prostamol .container-absolute {
+  left: 52%;
+}
+
+.prostamol .container-absolute.second {
+  bottom: 0;
+}
+
+.prostamol .absolute-link {
+  position: absolute;
+  width: 35%;
+  top: 6em;
+  left: 20%;
+  height: 2.442em;
+  bottom: 3.0525em;
+  z-index: 111;
+}
+
+.prostamol .absolute-link.second {
+  top: unset;
+  bottom: 4em;
+  left: unset;
+  right: 15%;
+  width: 20%;
+}
+
+.prostamol .link-next {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.prostamol .presentation {
+  background-image: none;
+  background-position: 0;
+  background-repeat: no-repeat;
+  padding: 0;
+  height: 100vh;
+}
+
+.prostamol .slide-img img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.prostamol .logo {
+  top: 0.4884em;
+  right: 1.4652em;
+}
+
+.prostamol .slide-title {
+  margin-top: 1.0989em;
+  top: 0.2442em;
+  left: 1.5em;
+  font-size: unset;
+  width: 34.03566em;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute !important;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  line-height: 0.7em;
+}
+
+.prostamol .slide-title span {
+  font-weight: bold;
+  font-size: 0.4884em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.prostamol .slide-title span sup {
+  font-weight: 400;
+}
+
+.prostamol .slide-title p {
+  display: inline;
+  border-bottom: 1px solid #fff;
+}
+
+.prostamol .slide-title sup {
+  border-bottom: 1px solid #fff;
+}
+
+.prostamol .slide-title i {
+  font-style: normal;
+  text-transform: lowercase;
+}
+
+.prostamol .slide-title .no-border {
+  border-bottom: none;
+}
+
+.prostamol .no-border {
+  border-bottom: none;
+}
+
+.prostamol .slides::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/postamol/figure-slide-5.png) no-repeat;
+  background-size: cover;
+}
+
+.prostamol .slides a {
+  color: inherit;
+}
+
+.prostamol b {
+  text-transform: capitalize;
+}
+
+.prostamol .btn {
+  background: #2498CA;
+  box-shadow: 0 0 0 0.16155em rgba(36, 152, 202, 0.5);
+}
+
+.prostamol .btn span {
+  font-weight: bold;
+  font-size: 0.4884em;
+  color: #FFFFFF;
+}
+
+.prostamol .btn:hover {
+  box-shadow: 0 0 0 0.16155em rgba(36, 152, 202, 0.8);
+}
+
+.prostamol .instruction {
+  z-index: 22;
+  padding: 0;
+  bottom: 20px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  position: fixed;
+}
+
+.prostamol .instruction a {
+  letter-spacing: 0.01em;
+  color: #000000;
+  font-size: 0.29304em;
+  font-weight: 600;
+}
+.prostamol .slides{
+  background-color: #2498CA;
+      overflow: hidden;
+}
+.prostamol .version {
+  transform: unset;
+  left: 170px !important;
+  bottom: 20px !important;
+  position: fixed;
+}
+
+.prostamol .version span {
+  letter-spacing: 0.01em;
+  color: #000000;
+  font-size: 0.29304em;
+}
+
+.prostamol .popups sup {
+  border-bottom: none;
+}
+
+.prostamol sup {
+  height: 1.15995em;
+  display: inline-block;
+  top: -0.1221em;
+  margin-left: 5px;
+  border-bottom: 1px solid #000000;
+  font-family: Open Sans;
+  font-weight: bold;
+}
+
+.prostamol .navigation-item {
+  height: 3.686em;
+  width: 4.419em;
+}
+
+.prostamol .content {
+  position: absolute;
+  top: 3.9072em;
+  width: 100%;
+  max-width: 100%;
+  background: #F5F5F5;
+  box-shadow: 0px -10px 70px rgba(11, 80, 109, 0.3);
+  border-top-left-radius: 1.221em;
+  border-top-right-radius: 1.221em;
+}
+
+.prostamol .content-title {
+  text-align: center;
+}
+
+.prostamol .content-title span {
+  font-weight: bold;
+  font-size: 0.8547em;
+  text-transform: uppercase;
+  color: #2498CA;
+}
+
+.prostamol .content-title span sup {
+  border-bottom: 1px solid #2498CA;
+  font-weight: bold;
+  font-family: Open Sans;
+}
+
+.prostamol .content-title span .no-border {
+  border-bottom: none;
+}
+
+.prostamol .content-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .content-block__img {
+  position: relative;
+}
+
+.prostamol .absolute {
+  top: 0;
+  left: 0;
+}
+
+.prostamol .content-text p {
+  font-size: 0.4884em;
+  font-weight: 600;
+}
+
+.prostamol .content-text.font-600 p {
+  font-weight: 600 !important;
+}
+
+.prostamol .slide-1 {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 99vh;
+  background-image: url(../img/postamol/slide-1.png);
+  background-position: 0;
+  background-position: center;
+  background-color: #2498CA;
+  background-repeat: no-repeat;
+}
+
+.prostamol .slide-1::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../img/postamol/figure-1.png) no-repeat;
+  background-size: cover;
+}
+
+.prostamol .slide-1 .slide__title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.prostamol .slide-1 .version {
+  left: 1em;
+  bottom: 2.221em;
+}
+
+.prostamol .slide-1 .version span {
+  color: #fff;
+}
+
+.prostamol .slide-1 .instruction {
+  bottom: 1em;
+}
+
+.prostamol .slide-1 .instruction a {
+  color: #fff;
+}
+
+.prostamol .slide-2 .content {
+  margin-top: 1.221em;
+  display: flex;
+  justify-content: center;
+}
+
+.prostamol .slide-2 .content-wrap {
+  display: flex;
+}
+
+.prostamol .slide-2 .content-block {
+  position: relative;
+  margin-left: 0.18315em;
+  margin-right: 0.18315em;
+  width: 10.4884em;
+  height: 12.24664em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+}
+
+.prostamol .slide-2 .content-block:nth-child(2) .content-block__img {
+  width: 7.6em !important;
+}
+
+.prostamol .slide-2 .content-block__img {
+  position: absolute;
+  left: 50%;
+  top: -3.2em;
+  transform: translateX(-50%);
+  width: 8.85226em;
+}
+
+.prostamol .slide-2 .content-block .btn {
+  margin-top: 3.1746em;
+  width: 7.73871em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-2 .content-block__text {
+  padding-left: 0.6105em;
+  padding-right: 0.6105em;
+  margin-top: 1.5873em;
+}
+
+.prostamol .slide-2 .content-block__text a {
+  color: #000000;
+  font-size: 0.43956em;
+  font-weight: normal;
+}
+
+.prostamol .slide-3 .content {
+  top: 6.10501em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20.75702em;
+}
+
+.prostamol .slide-3 .content-block__img {
+  position: absolute;
+  top: -3.663em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10.8547em;
+}
+
+.prostamol .slide-3 .content-block .btn-wrap {
+  margin-top: 4.3956em;
+}
+
+.prostamol .slide-3 .content-block .btn {
+  margin-top: 0.6105em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12.21001em;
+}
+
+.prostamol .slide-3 .content-block .btn a {
+  display: flex;
+  align-items: center;
+}
+
+.prostamol .slide-3 .content-block .btn a span {
+  height: 25px !important;
+}
+
+.prostamol .slide-3 .content .instruction {
+  left: unset;
+  transform: unset;
+  right: 0.9768em;
+  bottom: 7.5em !important;
+}
+.prostamol .slide-4 .content .instruction{
+  display: none;
+}
+.prostamol .slide-3 .content .version {
+  left: 0.9768em !important;
+  bottom: 7.5em !important;
+}
+.instruction-wrap{
+  width: 20.75702em;
+  position: fixed;
+  bottom:20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 11;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: row-reverse;
+}
+.instruction-wrap .instruction{
+  position: static;
+  transform: unset;
+}
+.instruction-wrap .version{
+  position: static;
+  transform: unset;
+}
+.prostamol .slide-4 .content .version {
+  display: none;
+}
+
+.prostamol .slide-4 .slide-title {
+  margin-top: 0.1221em;
+  width: 27.55267em;
+  display: block;
+  line-height: 0.7em;
+}
+
+.prostamol .slide-4 .content {
+  top: 3.7em;
+}
+
+.prostamol .slide-4 .content .btn-wrap {
+  margin-top: 0.6105em;
+}
+
+.prostamol .slide-4 .content .btn {
+  width: 12.34432em;
+  display: block;
+  height: auto;
+  text-align: center;
+  line-height: normal;
+  padding-bottom: 0.2442em;
+}
+
+.prostamol .slide-4 .content .btn a {
+  display: inline;
+  line-height: 10px;
+}
+
+.prostamol .slide-4 .content .btn sup {
+  border-bottom: none;
+}
+
+.prostamol .slide-4 .content .btn span {
+  font-size: 0.4884em;
+}
+
+.prostamol .slide-4 .content .instruction {
+  bottom: 4em;
+}
+
+.prostamol .slide-4 .content .version {
+  bottom: 4em;
+}
+
+.prostamol .slide-5 .content {
+  padding-top: 0.67155em;
+  width: 100%;
+}
+
+.prostamol .slide-5 .content-block {
+  margin-top: 0.54945em;
+  display: flex;
+  justify-content: center;
+}
+
+.prostamol .slide-5 .content-block__img {
+  width: 25.68987em;
+  position: relative;
+}
+
+.prostamol .slide-5 .content-block__img .absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.prostamol .slide-5 .content-notice {
+  width: 25.68987em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-5 .content-notice span {
+  font-weight: normal;
+  font-size: 0.30525em;
+  color: #000;
+}
+
+.prostamol .slide-6 .content {
+  padding-top: 0.7326em;
+}
+
+.prostamol .slide-6 .content-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.54945em;
+}
+
+.prostamol .slide-6 .content-title sup {
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-6 .content-block {
+  width: 8.32723em;
+  height: 7.14286em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  padding: 0.54945em;
+  margin-left: 0.18315em;
+  margin-right: 0.18315em;
+}
+
+.prostamol .slide-6 .content-block span {
+  font-weight: bold;
+  font-size: 3.2967em;
+  color: #2497CA;
+  line-height: 0.54945em;
+}
+
+.prostamol .slide-6 .content-block__text {
+  margin-top: 0.6105em;
+  font-weight: normal;
+  font-size: 0.57387em;
+}
+
+.prostamol .slide-6 .content-notice {
+  width: 25.65324em;
+  height: 3.93162em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  padding-top: 0.54945em;
+  padding-left: 0.67155em;
+  margin-top: 0.54945em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-6 .content-notice__wrap span {
+  display: block;
+  font-weight: normal;
+  font-size: 0.57387em;
+  line-height: normal;
+}
+
+.prostamol .slide-6 .content-notice__img {
+  width: 3.49206em;
+}
+
+.prostamol .slide-7 .slide-title span {
+  font-size: 0.54945em;
+  font-weight: bold;
+  line-height: normal;
+  display: block;
+}
+
+.prostamol .slide-7 .slide-title p {
+  display: block;
+  border-bottom: none;
+  font-size: 0.7105em;
+  font-weight: normal;
+  text-transform: none;
+  line-height: normal;
+}
+
+.prostamol .slide-7 .content {
+  padding-top: 0.42735em;
+  padding-left: 0.8547em;
+  padding-right: 0.8547em;
+}
+
+.prostamol .slide-7 .content-text b {
+  font-weight: 600;
+  font-size: 0.30525em;
+  color: #000;
+}
+
+.prostamol .slide-7 .content-text p {
+  margin-top: 0.2442em;
+  font-weight: normal;
+  font-size: 0.30525em;
+  line-height: normal;
+}
+
+.prostamol .slide-7 .content-title {
+  text-align: left;
+  margin-top: 0.3663em;
+}
+
+.prostamol .slide-7 .content-title span {
+  display: block;
+  font-size: 0.45177em;
+  line-height: normal;
+}
+
+.prostamol .slide-7 .content-title p {
+  padding-top: 0.2442em;
+  font-weight: normal;
+  font-size: 0.4884em;
+}
+
+.prostamol .slide-7 .content-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.prostamol .slide-7 .content-block__img {
+  margin-top: 0.2442em;
+  width: 25.76313em;
+}
+
+.prostamol .slide-7 .content-notice {
+  transform: translateY(-20px);
+  line-height: normal;
+}
+
+.prostamol .slide-7 .content-notice span {
+  font-weight: normal;
+  font-size: 0.30525em;
+}
+
+.prostamol .slide-7.custom .content {
+  padding-top: 0;
+}
+
+.prostamol .slide-7.custom .content-wrap {
+  display: block;
+  width: 25.76313em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-7.custom .content-title {
+  width: 25.76313em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: inherit;
+}
+
+.prostamol .slide-7.custom .content-title span {
+  font-size: 0.45177em;
+}
+
+.prostamol .slide-7.custom .content-title p {
+  font-size: 0.45177em;
+}
+
+.prostamol .slide-7.custom .content-text {
+  width: 25.76313em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.prostamol .slide-7.custom .content-notice {
+  width: 25.76313em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.prostamol .slide-8 .content-text p {
+  font-size: 0.4884em;
+  font-weight: 600;
+}
+
+.prostamol .slide-8 .content-text .font-600 p {
+  font-weight: 600 !important;
+}
+
+.prostamol .slide-8 .content-block {
+  display: flex;
+  justify-content: space-between;
+  width: 25.76313em;
+  height: 2.10012em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.4884em;
+}
+
+.prostamol .slide-8 .content-block__item {
+  display: flex;
+  align-items: center;
+}
+
+.prostamol .slide-8 .content-block__item span {
+  font-size: 1.8315em;
+  font-weight: bold;
+  color: #2498CA;
+}
+
+.prostamol .slide-8 .content-block__item p {
+  margin-left: 0.4884em;
+  font-weight: normal;
+  font-size: 0.45177em;
+}
+
+.prostamol .slide-8 .content-block__item sup {
+  font-weight: normal;
+}
+
+.prostamol .slide-8 .content-block__item:last-child {
+  padding-right: 5.5em;
+}
+
+.prostamol .slide-9 .content {
+  top: 6em;
+  padding-top: 0.54945em;
+}
+
+.prostamol .slide-9 .content-text p {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 0.30525em;
+}
+
+.prostamol .slide-9 .content-block__img {
+  margin-top: 0.42735em;
+}
+
+.prostamol .slide-10 .content {
+  top: 6em;
+  padding-top: 0.54945em;
+}
+
+.prostamol .slide-10 .content-block__img {
+  margin-top: 0.54945em;
+  width: 26.43468em;
+}
+
+.prostamol .slide-11 .slide-title p:last-child {
+  font-weight: 700;
+}
+
+.prostamol .slide-11 .content {
+  top: 6em;
+  padding-top: 0.54945em;
+}
+
+.prostamol .slide-11 .content-block__img {
+  margin-top: 0.18315em;
+  width: auto;
+}
+
+.prostamol .slide-11 .content-title span {
+  font-size: 0.6105em;
+}
+
+.prostamol .slide-11 .content-title p {
+  padding-top: 0;
+  display: inline;
+  color: #DB0000;
+  font-weight: 700;
+  font-size: 0.7326em !important;
+}
+
+.prostamol .slide-14 .slide-title {
+  position: static;
+  width: 34.03566em;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-14 .content {
+  padding-top: 0.42735em;
+}
+
+.prostamol .slide-14 .content-text b {
+  font-size: inherit;
+}
+
+.prostamol .slide-14 .content-text .no-border {
+  border-bottom: none;
+}
+
+.prostamol .slide-14 .content-block {
+  margin-top: 0.2442em;
+  display: flex;
+  align-items: center;
+  width: 34.03566em;
+  height: 1.14774em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.54945em;
+}
+
+.prostamol .slide-14 .content-block a {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  color: inherit;
+}
+
+.prostamol .slide-14 .content-block p {
+  font-weight: 400;
+  font-size: 0.45177em;
+  color: #000;
+}
+
+.prostamol .slide-14 .content-block p sup {
+  font-weight: 400;
+}
+
+.prostamol .slide-14 .content-block__title {
+  margin-top: -0.4884em;
+  font-size: 0.6105em;
+  text-transform: uppercase;
+  color: #2498CA;
+}
+
+.prostamol .slide-14 .content-block__title span {
+  padding-left: 5px;
+  font-weight: bold;
+  text-transform: none;
+}
+
+.prostamol .slide-14 .content-container {
+  width: 34.03566em;
+}
+
+.prostamol .slide-14 .content-notice {
+  width: 34.19773em;
+}
+
+.prostamol .slide-14 .content .content-block__title {
+  width: 34.19773em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: inherit;
+}
+
+.prostamol .slide-14 .slide-title p:last-child {
+  font-weight: 400;
+}
+
+.prostamol .slide-14 .content-block__img {
+  width: 25.64103em;
+}
+
+.prostamol .slide-15 .content-title {
+  width: auto !important;
+}
+
+.prostamol .slide-15 .content-title p {
+  font-size: .5em !important;
+}
+
+.prostamol .slide-17 .content {
+  padding-top: 0.18315em;
+}
+
+.prostamol .slide-17 .content-block__title {
+  font-size: 0.45177em;
+  font-weight: 700;
+}
+
+.prostamol .slide-17 .content-block__img:last-child {
+  margin-top: 0;
+}
+
+.prostamol .slide-17 .content-block__title p {
+  font-size: 0.45177em;
+}
+
+.prostamol .slide-18 .content-wrap {
+  display: block;
+}
+
+.prostamol .slide-18 .content-block {
+  width: 100%;
+  height: 3.01587em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+}
+
+.prostamol .slide-18 .content-block span {
+  font-size: 1.7094em;
+  font-weight: bold;
+  color: #2497CA;
+}
+
+.prostamol .slide-18 .content-block p {
+  font-size: 0.52503em;
+  margin-left: 0.6105em;
+}
+
+.prostamol .slide-18 .content-block p sup {
+  border-bottom: 1px solid #000;
+}
+
+.prostamol .slide-18 .content-block p .img {
+  padding-top: 5px;
+  display: inline;
+  width: 80%;
+  font-size: inherit;
+  padding-left: 0.9768em;
+  padding-right: 0.9768em;
+}
+
+.prostamol .slide-18 .content-block p .img img {
+  transform: translateY(5px);
+  max-width: 30%;
+}
+
+.prostamol .slide-18 .content-notice {
+  margin-top: 0.3663em;
+  transform: none;
+}
+
+.prostamol .slide-18 .content-notice span {
+  display: block;
+  line-height: normal;
+}
+
+.prostamol .slide-18 .content-block__img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-19 .content-container {
+  width: auto !important;
+}
+
+.prostamol .slide-19 .content-block p {
+  font-size: 0.72503em;
+}
+
+.prostamol .slide-20 .slide-title span {
+  font-size: 1.0989em;
+  line-height: normal;
+}
+
+.prostamol .slide-20 .content {
+  top: 11em;
+}
+
+.prostamol .slide-20 .content .instruction,
+.prostamol .slide-20 .content .version {
+  bottom: 12.9em !important;
+}
+
+.prostamol .slide-21 .slide-title:last-child {
+  position: relative;
+  margin-top: 0.18315em;
+}
+
+.prostamol .slide-25 .img {
+  padding-top: 0.1221em;
+  display: flex !important;
+  margin-left: 0.1221em;
+  margin-right: 0.1221em;
+}
+
+.prostamol .slide-25 .content-block {
+  height: 4.0293em;
+}
+
+.prostamol .slide-26 .slide-title span {
+  font-size: 1.0989em;
+  line-height: 1.221em;
+  text-transform: capitalize;
+}
+
+.prostamol .slide-26 .content-block__img {
+  top: -2.86224em;
+}
+
+.prostamol .slide-26 .content {
+  top: 10em;
+}
+
+.prostamol .slide-26 .content .instruction {
+  bottom: 11em !important;
+}
+
+.prostamol .slide-26 .content .version {
+  bottom: 11em !important;
+}
+
+.prostamol .slide-27 .slide__title {
+  width: 33.14425em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.prostamol .slide-27 .slide__title span {
+  color: #2498CA;
+  font-size: 1.0989em;
+}
+
+.prostamol .slide-27 .slide__title p {
+  font-size: 0.6em;
+  color: #2498CA;
+}
+
+.prostamol .slide-27 .slide__title sup {
+  border-bottom: 1px solid #2498CA;
+}
+
+.prostamol .slide-27 .slide__title .no-border {
+  border-bottom: none !important;
+}
+
+.prostamol .slide-27 .content-block__img {
+  position: static;
+  width: 30.969em;
+  margin-left: auto;
+  margin-right: auto;
+  transform: unset;
+}
+
+.prostamol .slide-28 .slide-title p {
+  font-size: 1.0989em;
+  font-weight: 700;
+  color: #fff;
+}
+
+.prostamol .slide-28 .slide-title span {
+  padding-top: 0.6105em;
+}
+
+.prostamol .slide-28 .content {
+  top: 7em;
+}
+
+.prostamol .slide-28 .content-wrap {
+  width: 25.03566em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-28 .content-title span {
+  font-weight: 700;
+  font-size: 0.6105em;
+  color: #2498CA;
+}
+
+.prostamol .slide-28 .content-notice span {
+  font-weight: 600;
+  font-size: 0.3663em;
+}
+
+.prostamol .slide-28 .instruction {
+  bottom: 8.5em;
+}
+
+.prostamol .slide-28 .version {
+  bottom: 8.5em;
+}
+
+.prostamol .slide-29 .slide-title p {
+  font-size: 0.4884em;
+  color: #fff;
+  font-weight: 400;
+}
+
+.prostamol .slide-29 .slide-title sup {
+  font-weight: 400;
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-29 .slide-title b {
+  text-transform: capitalize;
+}
+
+.prostamol .slide-29 .content {
+  top: 6em;
+}
+
+.prostamol .slide-29 .content-title {
+  display: block;
+  width: 34.03566em;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: inherit;
+}
+
+.prostamol .slide-29 .content-title p {
+  font-size: 0.30525em;
+}
+
+.prostamol .slide-29 .content-title p sup {
+  font-weight: 400;
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-29 .content-notice {
+  width: 34.03566em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.18315em;
+  transform: none;
+  font-size: inherit;
+}
+
+.prostamol .slide-29 .content-notice span {
+  text-transform: capitalize;
+  font-size: 0.45177em;
+  color: #2498CA;
+  font-weight: 800;
+}
+
+.prostamol .slide-29 .content-notice span p {
+  display: inline;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.prostamol .slide-29 .content-footer {
+  width: 34.03566em;
+  height: 2.22222em;
+  display: flex;
+  align-items: center;
+  padding-left: 0.9768em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.3663em;
+}
+
+.prostamol .slide-29 .content-footer p {
+  font-size: 0.39072em;
+}
+
+.prostamol .slide-29 .content-footer p span {
+  font-weight: 700;
+  color: #2498CA;
+}
+
+.prostamol .slide-29 .content-footer p sup {
+  font-weight: 400;
+  font-size: 0.3663em;
+}
+
+.prostamol .slide-29 .content-adaptive {
+  width: 34.03566em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.1221em;
+}
+
+.prostamol .slide-29 .content-adaptive p {
+  font-size: 0.30525em;
+}
+
+.prostamol .slide-29 .content-block {
+  width: 34.03566em;
+  height: 5.55556em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.6105em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  padding-left: 0.6105em;
+  padding-top: 0.4884em;
+}
+
+.prostamol .slide-29 .content-block a {
+  display: block;
+  margin-top: 0.2442em;
+  font-size: 0.45177em;
+}
+
+.prostamol .slide-29 .content-block a sup {
+  font-weight: 400;
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-29 .instruction {
+  /* bottom: 7.5em; */
+}
+
+.prostamol .slide-29 .version {
+  /* bottom: 7.5em; */
+}
+
+.prostamol .slide-29.custom .content-block {
+  margin-top: 0;
+  background-color: transparent;
+  padding-left: 0;
+  padding-top: 0.3663em;
+  width: auto;
+}
+
+.prostamol .slide-30 .content {
+  padding-top: 0.1221em;
+}
+
+.prostamol .slide-30 .content-block {
+  margin-top: 0.2442em;
+  height: auto;
+}
+
+.prostamol .slide-30 .content-footer {
+  width: auto;
+}
+
+.prostamol .slide-31 .content {
+  padding-top: 0.1221em;
+}
+
+.prostamol .slide-31 .content-block {
+  margin-top: 0.2442em;
+  height: auto;
+  padding-left: 0;
+  background-color: transparent;
+  padding-top: 0;
+}
+
+.prostamol .slide-33 .slide-title p {
+  color: #fff;
+  font-size: 0.4884em;
+}
+
+.prostamol .slide-33 .slide-title sup {
+  font-size: 0.42735em;
+  font-weight: 400;
+}
+
+.prostamol .slide-33 .content {
+  padding-top: 1.221em;
+  top: 8em;
+}
+
+.prostamol .slide-33 .instruction, .prostamol .slide-33 .version {
+  /* bottom: 9.5em; */
+}
+
+.prostamol .slide-34 .content {
+  top: 7em;
+}
+
+.prostamol .slide-34 .instruction {
+  /* bottom: 8.5em !important; */
+}
+
+.prostamol .slide-34 .version {
+  bottom: 8.5em !important;
+}
+
+.prostamol .slide-35 .slide-title sup {
+  font-weight: 400;
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-35 .instruction, .prostamol .slide-35 .version {
+  /* bottom: 6.8em; */
+}
+
+.prostamol .slide-37 .slide-title {
+  pointer-events: none;
+  margin-top: 2.0757em;
+}
+
+.prostamol .slide-37 .slide-title span {
+  font-size: 1.0989em;
+  text-transform: capitalize;
+}
+
+.prostamol .slide-37 .slide-title sup {
+  font-weight: 400;
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-37 .content {
+  top: 9em;
+}
+
+.prostamol .slide-37 .content-wrap {
+  display: block;
+  width: 34.03566em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-37 .content-block {
+  position: absolute;
+  width: 34.03566em;
+}
+
+.prostamol .slide-37 .content-block__img {
+  position: absolute;
+  right: 40px;
+  top: -6em;
+  width: 10.4884em;
+}
+
+.prostamol .slide-37 .content-title span {
+  font-size: 0.45177em;
+}
+
+.prostamol .slide-37 .content-title span sup {
+  font-weight: 700;
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-37 .content-footer {
+  margin-top: .8315em;
+}
+
+.prostamol .slide-37 .content-footer .content-img {
+  width: 25.64103em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-37 .instruction, .prostamol .slide-37 .version {
+  /* bottom: 10.5em; */
+}
+
+.prostamol .slide-38 .slide-title span {
+  font-size: 1.0989em;
+  text-transform: capitalize;
+}
+
+.prostamol .slide-38 .content-wrap {
+  display: block;
+  width: 34.03566em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-38 .content-title span {
+  font-size: 0.45177em;
+}
+
+.prostamol .slide-38 .instruction, .prostamol .slide-38 .version {
+  bottom: 7em;
+}
+
+.prostamol .slide-38 .content-block__img {
+  margin-top: 1.221em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-39 .content-title sup {
+  font-size: 0.42735em;
+}
+
+.prostamol .slide-39 .content-wrap {
+  display: block;
+  width: 34.03566em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-39 .content-block {
+  padding-right: 100px;
+  margin-top: 0.79365em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prostamol .slide-39 .content-block__img {
+  width: 3.72405em;
+}
+
+.prostamol .slide-39 .content-list {
+  width: 20.9475em;
+}
+
+.prostamol .slide-39 .content-list li {
+  margin-top: 0.18315em;
+  width: 100%;
+  height: 1.4652em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  display: flex;
+  align-items: center;
+}
+
+.prostamol .slide-39 .content-list li::before {
+  display: none;
+}
+
+.prostamol .slide-39 .content-list li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.89133em;
+  height: 0.89133em;
+  border-radius: 50%;
+  background-color: rgba(36, 151, 200, 0.13);
+}
+
+.prostamol .slide-39 .content-list li span::before {
+  content: '';
+  display: block;
+  width: 0.6105em;
+  height: 0.6105em;
+  border-radius: 50%;
+  background: #2498CA;
+}
+
+.prostamol .slide-39 .content-list li p {
+  margin-left: 0.8547em;
+  font-size: .65177em;
+}
+
+.prostamol .slide-39 .instruction, .prostamol .slide-39 .version {
+  bottom: 6.8em;
+}
+
+.prostamol .slide-41 .slide-title span {
+  font-size: 0.6105em;
+}
+
+.prostamol .slide-41 .content-text p {
+  font-size: 0.39em;
+  line-height: normal;
+}
+
+.prostamol .slide-41 .content-text b {
+  font-size: unset;
+}
+
+.prostamol .slide-41 .instruction, .prostamol .slide-41 .version {
+  bottom: 6.8em;
+}
+
+.prostamol .slide-42 .content-block {
+  margin-top: 0.7326em;
+  padding-top: 0.54945em;
+  padding-left: 0.79365em;
+  padding-right: 0.79365em;
+  padding-bottom: 0.54945em;
+  width: 25.71429em;
+  background: #FFFFFF;
+  border-radius: 0.4884em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prostamol .slide-42 .content-block .title {
+  font-weight: 600;
+  font-size: 0.39072em;
+}
+
+.prostamol .slide-42 .content-block p {
+  margin-top: 0.8547em;
+  font-size: 0.30525em;
+}
+
+.prostamol .slide-42 .content-notice {
+  width: 25.71429em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.9768em;
+}
+
+.prostamol .slide-42 .content-notice span {
+  display: block;
+  font-size: 0.30525em;
+  margin-bottom: 0.2442em;
+}
+
+.prostamol .slide-42 .instruction, .prostamol .slide-42 .version {
+  bottom: 7em;
+}
+
+@media (max-width: 2000px) {
+  .prostamol .slide-1 {
+    background-image: url(../img/postamol/slide-1920.png);
+    background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 1400px) {
+  .prostamol .slide-1 {
+    background-image: url(../img/postamol/slide-1-1300.png);
+    background-repeat: no-repeat;
+    background-position-y: -20px;
+  }
+}
+
+.img-slide-3 {
+  width: 98%;
+}
+
+:root {
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+}
+
+.animate__animated {
+  animation-duration: 1s;
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInColor {
+  from {
+    opacity: 50%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.fadeInColor {
+  animation-name: fadeInColor;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: calc(var(--animate-duration) * 0.75);
+  animation-name: bounceIn;
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-fwd-center {
+  animation: slide-in-fwd-center 1s 1s both;
+}
+
+.attention__mark span {
+  animation-delay: 2s;
+}
+
+.js-call-popup {
+  animation-delay: 2s;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.absolute.relative {
+  position: relative;
+  z-index: 11;
+}
+
+.absolute.alk {
+  width: 10%;
+  left: 11%;
+  top: 38%;
+  z-index: 11;
+  animation-delay: 3s;
+}
+
+.absolute.slide-arrow-1 {
+  left: 14.7%;
+  width: 3%;
+  top: 27%;
+  z-index: 2;
+  animation-delay: 3.7s;
+}
+
+.absolute.slide-arrow-2 {
+  width: 11%;
+  left: 18%;
+  top: 18%;
+  animation-delay: 4s;
+}
+
+.absolute.slide-arrow-3 {
+  width: 11%;
+  left: 18%;
+  top: 31%;
+  animation-delay: 4.3s;
+}
+
+.absolute.slide-arrow-4 {
+  width: 16%;
+  left: 18%;
+  top: 43%;
+  animation-delay: 4.6s;
+}
+
+.absolute.slide-arrow-5 {
+  width: 18%;
+  left: 19%;
+  top: 46%;
+  animation-delay: 4.9s;
+}
+
+.absolute.slide-arrow-6 {
+  width: 27%;
+  left: 16%;
+  top: 48%;
+  animation-delay: 5.2s;
+}
+
+.absolute.slide-5-arrow {
+  width: 94%;
+  top: 45%;
+  animation-delay: 2s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute.slide-9-arrow-1 {
+  width: 6.2%;
+  top: 34%;
+  animation-delay: 2s;
+  left: 34.9%;
+}
+
+.absolute.slide-9-arrow-2 {
+  width: 6.1%;
+  top: 35.9%;
+  left: 79%;
+  animation-delay: 3s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-1 {
+  width: 15%;
+  top: 4%;
+  left: 63%;
+  animation-delay: 1s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-2 {
+  width: 15%;
+  top: 4%;
+  left: 82%;
+  animation-delay: 2s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-3 {
+  width: 15%;
+  top: 52.4%;
+  left: 63%;
+  animation-delay: 3s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-4 {
+  width: 15%;
+  top: 52.4%;
+  left: 82%;
+  animation-delay: 4s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-5 {
+  width: 22%;
+  top: 4%;
+  left: 14%;
+  animation-delay: 1s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-6 {
+  width: 22%;
+  top: 13.5%;
+  left: 14%;
+  animation-delay: 1.5s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-7 {
+  width: 22%;
+  top: 23%;
+  left: 14%;
+  animation-delay: 2s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-8 {
+  width: 22%;
+  top: 32.5%;
+  left: 14%;
+  animation-delay: 2.5s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-9 {
+  width: 22%;
+  top: 42%;
+  left: 14%;
+  animation-delay: 3s;
+  z-index: 0;
+}
+
+.absolute.slide-14-arrow-10 {
+  width: 22%;
+  top: 51.5%;
+  left: 14%;
+  animation-delay: 3.5s;
+  z-index: 0;
+}
+
+.absolute.slide-18-arrow-1-3 {
+  width: 11%;
+  top: 11%;
+  left: 15%;
+  animation-delay: 1s;
+}
+
+.absolute.slide-18-arrow-1-1 {
+  width: 7%;
+  top: 20.5%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.absolute.slide-18-arrow-1 {
+  width: 5.7%;
+  top: 39.5%;
+  left: 20%;
+  animation-delay: 1.5s;
+}
+
+.absolute.slide-18-arrow-2 {
+  width: 10.7%;
+  top: 30.5%;
+  left: 33.8%;
+  animation-delay: 3.5s;
+}
+
+.absolute.slide-18-arrow-2-1 {
+  width: 6.7%;
+  top: 33.5%;
+  left: 31%;
+  animation-delay: 4s;
+}
+
+.absolute.slide-18-arrow-2-3 {
+  width: 5.9%;
+  top: 49.1%;
+  left: 33.4%;
+  animation-delay: 3s;
+}
+
+.slide-16-list {
+  animation-delay: 1s;
+}
+
+.slide-16-list.list-2 {
+  animation-delay: 1.5s;
+}
+
+.slide-16-list.list-3 {
+  animation-delay: 2s;
+}
+
+.slide-16-list.list-4 {
+  animation-delay: 2.5s;
+}
+
+.delay-1s {
+  animation-delay: 1s;
+}
+
+.delay-1-2s {
+  animation-delay: 1.2s;
+}
+
+.delay-1-4s {
+  animation-delay: 1.4s;
+}
+
+.delay-1-5s {
+  animation-delay: 1.5s;
+}
+
+.delay-1-6s {
+  animation-delay: 1.6s;
+}
+
+.delay-1-8s {
+  animation-delay: 1.8s;
+}
+
+.delay-2s {
+  animation-delay: 2s;
+}
+
+.delay-2-2s {
+  animation-delay: 2.2s;
+}
+
+.delay-2-5s {
+  animation-delay: 2.5s;
+}
+
+.delay-3s {
+  animation-delay: 3s;
+}
+
+.delay-3-5s {
+  animation-delay: 3.5s;
+}
+
+.delay-4s {
+  animation-delay: 4s;
+}
+
+.delay-4-5s {
+  animation-delay: 4.5s;
+}
+
+.delay-5s {
+  animation-delay: 5s;
+}
+
+.delay-5-5s {
+  animation-delay: 5.5s;
+}
+
+.delay-7s {
+  animation-delay: 7s;
+}
+
+.delay-6s {
+  animation-delay: 6s;
+}
+
+.delay-7s {
+  animation-delay: 7s;
+}
+
+.delayOut-3-5s {
+  animation-delay: 3.2s;
+  animation-name: fadeOut;
+}
+
+.delayOut-4-5s {
+  animation-delay: 3.5s;
+  animation-name: fadeOut;
+}
+
+@media (max-width: 992px) {
+  .logo {
+    top: 1%;
+  }
+}
+.prostamol.no-bg .slides{
+ background:transparent;
+}
+.ui-loader-default h1{
+  display: none !important;
+}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper{
+ background-color:transparent !important;
+ text-shadow: none !important;
+}
+.ui-loader-default{
+  display: none !important;
+}
+.ui-loader .ui-corner-all .ui-loader-default .ui-body-a{
+  display: none !important;
+}
+/*# sourceMappingURL=styles.css.map */
