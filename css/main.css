@@ -1,0 +1,72 @@
+.carousel-control-next, .carousel-control-prev{
+	height: 250px;
+	width: 90px;
+	opacity: 1;
+	z-index: 100;
+	top: 50%;
+    margin-top: -125px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+	display: block;
+    height: fit-content;
+    width: fit-content;
+    background: none;
+}
+
+.page-content{
+	background: linear-gradient(64.94deg, #003279 -11.59%, #26A4EB 79.91%);
+}
+
+.carousel__content{
+	max-width: 2160px;
+	max-height: 1524px;
+}
+
+.carousel__content img{
+	width: 100%;
+}
+
+/* footer */
+
+footer{
+	height: 96px;
+	background: #fff;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.footer-btns ul{
+	display: flex;
+	justify-content: space-between;
+	gap: 0 50px;
+	list-style: none;
+}
+
+.footer-btns ul li{
+	height: 66px;
+	padding-top: 12px;
+}
+
+.footer-btns ul li button{
+	padding: 0;
+}
+
+.footer-btns ul li:nth-child(2){
+	border-right: 1px solid #AAAAAA;
+	padding-right: 55px;
+}
+
+.footer-btns ul li:nth-child(4){
+	border-right: 1px solid #AAAAAA;
+	padding-right: 55px;
+}
+
+.footer-btns ul li:nth-child(3){
+	padding-left: 0px;
+}
+
+.footer-logo{
+	text-align: center;
+}

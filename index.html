@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pastamol</title>
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="css/main.css" rel="stylesheet"> <!-- main css file -->
+  </head>
+  <body>
+    <main class="page-content">
+		<div id="carouselExampleFade" class="carousel slide carousel-fade">
+
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"><img src="images/icons/left.svg" alt=""></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		    	<div class="carousel__content">
+		    		<div class="content__img"><img src="images/bg_page_2.0.jpg" alt=""></div>
+		    	<!-- 	<div class="content__btns">
+		    			<button class="btn btn-primary" type="submit">Как действует?</button>
+		    			<button class="btn btn-primary" type="submit">Заболевания поверхностных вен</button>
+		    			<button class="btn btn-primary" type="submit">Последствия травм и ушибов</button>
+		    		</div> -->
+		    	</div>
+		    </div>
+		    <div class="carousel-item">
+		    	<div class="carousel__content">
+		    		<div class="content__img"><img src="images/bg_page_3.0.jpg" alt=""></div>
+		    		<!-- <div class="content__btns">
+		    			<button class="btn btn-primary" type="submit">Как действует?</button>
+		    			<button class="btn btn-primary" type="submit">Заболевания поверхностных вен</button>
+		    		</div> -->
+		    	</div>
+		    </div>
+		  </div>
+
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"><img src="images/icons/right.svg" alt=""></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+
+		</div>
+    </main>
+
+    <footer class="container-fluid ">
+    	<div class="row">
+    		<div class="col footer-btns">
+    			<ul>
+    				<li><button class="btn" type="button"><img src="images/icons/home.svg" alt=""></button></li>
+    				<li><button class="btn" type="button"><img src="images/icons/slides.svg" alt=""></button></li>
+    				<li><button class="btn" type="button"><img src="images/icons/bibliography.svg" alt=""></button></li>
+    				<li><button class="btn" type="button"><img src="images/icons/additional.svg" alt=""></button></li>
+    			</ul>
+    		</div>
+    		<div class="col footer-logo"><img src="images/logo.svg" alt=""></div>
+    		<div class="col footer-logo"><a href="#">Полная инструкция по применению препарата Лиотон®</a></div>
+    	</div>
+    </footer>
+
+	<!-- Modals -->
+<!-- 	<div class="documents__modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h2 class="modal-title" id="exampleModalLabel">Как получить разрешительные документы</h2>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	        <button type="button" class="btn-close btn-back" data-bs-dismiss="modal" aria-label="Назад" data-bs-toggle="modal" data-bs-target="#exampleModalStep1">Назад</button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="documents__modal__line">
+	        	<div class="documents__modal__item">
+	        		<span class="modal__item__number">1</span>
+	        		<div class="modal__item__title">Оформление заявки</div>
+	        		<div class="modal__item__text">Вы можете оставить заявку на сайте, задать интересующие вопросы в онлайн-чате или позвонить по номеру +7 (495) 128-88-21</div>
+	        	</div>
+	        	<div class="documents__modal__item">
+	        		<span class="modal__item__number">2</span>
+	        		<div class="modal__item__title">Подготовка документов</div>
+	        		<div class="modal__item__text">После консультации мы отправим на ваш адрес электронной почту Договор и форму Заявления.</div>
+	        	</div>
+	        	<div class="documents__modal__item">
+	        		<span class="modal__item__number">3</span>
+	        		<div class="modal__item__title">Передача образцов продукции</div>
+	        		<div class="modal__item__text">Отправить пакет документов и образцы продукции можно любым удобным для вас способом: лично в пункте приема образцов, Почтой России, транспортными компаниями.</div>
+	        	</div>
+	        </div>
+	        <div class="documents__modal__line">
+	        	<div class="documents__modal__item">
+	        		<span class="modal__item__number">4</span>
+	        		<div class="modal__item__title">Оплата счета</div>
+	        		<div class="modal__item__text">После получения образцов мы выставляем счет на оплату. Когда оплата будет получена, образцы поступят на испытания.</div>
+	        	</div>
+	        	<div class="documents__modal__item">
+	        		<span class="modal__item__number">5</span>
+	        		<div class="modal__item__title">Испытание продукции и получение протокола</div>
+	        		<div class="modal__item__text">Мы проведем необходимые испытания и отправим протокол испытаний в бумажном и электронном виде.</div>
+	        	</div>
+	        	<div class="documents__modal__item">
+	        		<span class="modal__item__number">6</span>
+	        		<div class="modal__item__title">Получение разрешительных документов</div>
+	        		<div class="modal__item__text">На основании полученного Протокола испытаний вы можете самостоятельно регистрировать Декларацию Соответствия или обратиться в Центр сертификации АНО ЭКЦ «ИСТЭК» (или любой другой уполномоченный орган) и подать заявку на получение Декларации Соответствия.</div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div> -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- <script src="js/main.js"></script>  -->
+
+  </body>
+</html>
